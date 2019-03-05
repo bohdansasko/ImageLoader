@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JrL-53-7IY">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Images Page-->
+        <scene sceneID="iyx-aV-iZ8">
+            <objects>
+                <tableViewController id="JrL-53-7IY" customClass="ImagesPage" customModule="ImageLoader" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="180" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="JkG-9Z-Hdo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="kImageCellId" id="OQS-qg-l2y" customClass="ImageCell" customModule="ImageLoader" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="180"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OQS-qg-l2y" id="kOp-5x-OT2">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="179.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zWc-aa-uxn">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="179.5"/>
+                                        </imageView>
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="fIe-ny-lom">
+                                            <rect key="frame" x="177.5" y="80" width="20" height="20"/>
+                                            <color key="color" red="0.58105844259999995" green="0.12855249639999999" blue="0.57453137639999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="zWc-aa-uxn" firstAttribute="top" secondItem="kOp-5x-OT2" secondAttribute="top" id="41n-5D-cEy"/>
+                                        <constraint firstAttribute="trailing" secondItem="zWc-aa-uxn" secondAttribute="trailing" id="BO4-Nj-BFF"/>
+                                        <constraint firstItem="fIe-ny-lom" firstAttribute="centerX" secondItem="kOp-5x-OT2" secondAttribute="centerX" id="KCO-UV-cNt"/>
+                                        <constraint firstAttribute="bottom" secondItem="zWc-aa-uxn" secondAttribute="bottom" id="Rhd-sn-jNQ"/>
+                                        <constraint firstItem="zWc-aa-uxn" firstAttribute="leading" secondItem="kOp-5x-OT2" secondAttribute="leading" id="eKE-lB-0H8"/>
+                                        <constraint firstItem="fIe-ny-lom" firstAttribute="centerY" secondItem="kOp-5x-OT2" secondAttribute="centerY" id="tv4-cZ-4WJ"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="activityView" destination="fIe-ny-lom" id="WJT-Co-aIt"/>
+                                    <outlet property="picture" destination="zWc-aa-uxn" id="F1y-dP-4lj"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="JrL-53-7IY" id="ca0-eA-QU7"/>
+                            <outlet property="delegate" destination="JrL-53-7IY" id="KWX-Yq-Dsn"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pkc-VM-OYA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="300" y="-230"/>
+        </scene>
+    </scenes>
+</document>
